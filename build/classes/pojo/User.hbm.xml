@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 04-Feb-2021 13:36:55 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="pojo.User" table="user" catalog="chat" optimistic-lock="version">
+        <id name="userid" type="java.lang.Integer">
+            <column name="userid" />
+            <generator class="identity" />
+        </id>
+        <property name="username" type="string">
+            <column name="username" length="30" not-null="true" />
+        </property>
+        <property name="nickname" type="string">
+            <column name="nickname" length="20" not-null="true" />
+        </property>
+        <property name="usertype" type="string">
+            <column name="usertype" length="10" not-null="true" />
+        </property>
+        <property name="pwd" type="string">
+            <column name="pwd" length="30" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
